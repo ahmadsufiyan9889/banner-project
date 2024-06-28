@@ -11,10 +11,15 @@
             margin: 0px;
         }
 
+        .container {
+            width: 50%;
+            margin: auto;
+        }
+
         .landding_page {
             background-color: #1e184d;
             box-sizing: border-box;
-            width: 100vw;
+            width: 100%;
             height: 350px;
             border-bottom: 5px solid black;
         }
@@ -28,37 +33,52 @@
         }
 
         .l_p_h_img {
+            width: 100%;
+            /* Adjust width as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+            max-width: 150px;
+            /* Set maximum width if necessary */
+        }
+
+        /* .l_p_h_img {
             width: 150px;
             height: 150px;
             display: inline;
-
-        }
+        } */
 
         .l_p_headding h2 {
             padding-top: 15px;
-            text-align:center;
+            text-align: center;
         }
 
         .landding_img {
-            width: 300px;
-            height: 330px;
+            width: 100%;
+            /* Adjust width as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+            max-width: 300px;
+            /* Set maximum width if necessary */
             position: absolute;
             right: 0;
             top: 3rem;
-            z-index: 0
+            z-index: 0;
+            padding-right: 20px;
+            /* Adjust padding if needed */
+            display: flex;
         }
 
         .heading {
             text-align: center;
-            color:  #f05770;
+            color: #f05770;
             padding-top: 10px;
         }
 
         .para {
             box-sizing: border-box;
-            width: 100vw;
+            width: 100%;
             height: 300px;
-            border-bottom: 7px solid  #05002e;
+            border-bottom: 7px solid #05002e;
             background-image: url("123.png");
             display: flex;
             background-position: center;
@@ -79,7 +99,6 @@
             color: white;
             font-size: medium;
             text-align: center;
-
         }
 
         .imgage img {
@@ -93,7 +112,7 @@
         }
 
         .footer {
-            width: vw;
+            width: 97%;
             background-color: #1e184d;
             padding: 10px;
         }
@@ -113,186 +132,238 @@
             align-items: center;
             margin-top: 15px;
         }
-        .big{
+
+        .big {
             padding: 9px;
             font-size: large;
         }
 
+        @media (max-width: 992px) {
+            .landding_img {
+                /* display: flex; */
+                padding-right: 20px;
+                /* Hide on smaller screens */
+            }
+        }
+
         @media (max-width: 1200px) {
-            .l_p_headding h2, .paras-new h3, .content, .big p, .heading h2 {
+            .container {
+                width: 90%;
+            }
+
+            .l_p_headding h2,
+            .paras-new h3,
+            .content,
+            .big p,
+            .heading h2 {
                 font-size: 1.2em;
             }
         }
 
         @media (max-width: 992px) {
-            .l_p_headding h2, .paras-new h3, .content, .big p, .heading h2 {
+            .container {
+                width: 100%;
+            }
+
+            .l_p_headding h2,
+            .paras-new h3,
+            .content,
+            .big p,
+            .heading h2 {
                 font-size: 1em;
             }
+
+            /* .landding_img {
+                display: none;
+            }*/
         }
 
         @media (max-width: 768px) {
-            .l_p_headding h2, .paras-new h3, .content, .big p, .heading h2 {
+            .container {
+                width: 100%;
+            }
+
+            .l_p_headding h2,
+            .paras-new h3,
+            .content,
+            .big p,
+            .heading h2 {
                 font-size: 0.9em;
+            }
+
+            .l_p_headding {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .l_p_h_img {
+                width: 100px;
+                height: 100px;
             }
         }
 
         @media (max-width: 576px) {
-            .l_p_headding h2, .paras-new h3, .content, .big p, .heading h2 {
+            .container {
+                width: 100%;
+            }
+
+            .l_p_headding h2,
+            .paras-new h3,
+            .content,
+            .big p,
+            .heading h2 {
                 font-size: 0.8em;
+            }
+
+            .l_p_headding {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .l_p_h_img {
+                width: 100px;
+                height: 100px;
             }
         }
 
         @media (max-width: 400px) {
-            .l_p_headding h2, .paras-new h3, .content, .big p, .heading h2 {
+            .container {
+                width: 100%;
+            }
+
+            .l_p_headding h2,
+            .paras-new h3,
+            .content,
+            .big p,
+            .heading h2 {
                 font-size: 0.7em;
+            }
+
+            .l_p_headding {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .l_p_h_img {
+                width: 100px;
+                height: 100px;
             }
         }
     </style>
-
 </head>
 
 <body>
-    <div class="landding_page">
-        <div class="l_p_headding">
-            <img class="l_p_h_img" src="Screenshot 2024-06-23 183607.png" />
-            <h2>
-                CONVER YOUR DIGITAL DREAMS INTO REALITY WITH US
-            </h2>
-
-
-        </div>
-        <div class="paras-new">
-            <h3>Partner with Sociosip, a leading Digital Marketing
-                Agency, serving businesses worldwide</h3>
-        </div>
-        <div class="paras2-new">
-            <p>We assist small businesses in gaining measurable growth, through
-                digitalmarketing services.We are experts, who have the resources to
-                convert your dream of building a digital business into real
-                ity,through
-                the foll
-                owing:</p>
-        </div>
-
-
-        <img class="landding_img" src="low opacity main.png" />
-
-    </div>
-
-    <div class="para">
-        <div class="heading">
-            <h2>Dedicated Social Team</h2>
-            <p class="content">We have a team of dedicated professionals, including Social Media Experts, Graphic
-                Designers, Video Editors,
-                and Content Writers, who can produce all sorts of tailored content for your business social media
-                accounts
-                that cater to the target audience. The SMM, we have, leverages the power of social media networks and
-                through that takes your business from 0 to 10.</p>
-        </div>
-
-        <div class="imgage">
-            <img src="jason-goodman-fznQW-kn5VU-unsplash.jpg">
-        </div>
-
-    </div>
-    <div class="para">
-
-        <div class="imgage">
-            <img src="georgia-de-lotz-Ebb8fe-NZtM-unsplash.jpg">
-
-        </div>
-        <div class="heading">
-            <h2>Results Driven Services</h2>
-            <p class="content"> The strategies and services oered by us, are
-                completely resul
-                ts-driven.They are specifical
-                ly
-                developed for the businesses to gain higher
-                returns which can be further used to refine the
-                process of success. Everything done by our
-                digitalmarketing agency defines the success
-                of the businesse, whom we are helping</p>
-        </div>
-
-
-    </div>
-    <div class="para">
-        <div class="heading">
-            <h2>Take your business Global</h2>
-            <p class="content">There were days when the customer base was less
-                and limited to the people near you. But with the
-                assistance of digitalmarketing,you woul
-                to take your business globall
-                y and reach your aim.
-                By, promoting a business on various social media
-                channels, you can reach potential customers living
-                in any part of the globe.</p>
-        </div>
-        <div class="imgage">
-            <img src="muhammad-faiz-zulkeflee-alw-CwGFmwQ-unsplash.jpg">
-        </div>
-    </div>
-    <div class="para">
-
-        <div class="imgage">
-            <img src="dennis-cortes-6Mnof7cxaS4-unsplash.jpg">
-        </div>
-        <div class="heading">
-            <h2> Budget Friendly</h2>
-            <p class="content"> What do you think, would be budget-friendly for
-                your business? A TV ad or promoting business
-                through Social Media Campaigns? Of course
-                Social Media Campaigns. This would be indeed
-                the best option because, the audience you would
-                cater to through Social Media, would also be,
-                perfect according to your product-market fit and
-                perfect according to your product-market fit and
-                also would not add too much financial burden on
-                your business. </p>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <h2 style="text-align:center; color:white ;">GET IN TOUCH WITH US TODAY</h2>
-        <div class="footer_content">
-            <div class="footer_items">
-                <img style="width:30px; height:30px" src="email.png" />
-                <div class="big">
-                    <p>Email</p>
-                </div>
-                <p>abdulhuseinjaibi</p>
-                <p>lamiya@sociosip.com</p>
+    <div class="container">
+        <div class="landding_page">
+            <div class="l_p_headding">
+                <img class="l_p_h_img" src="Screenshot 2024-06-23 183607.png" />
+                <h2>
+                    CONVERT YOUR DIGITAL DREAMS INTO REALITY WITH US
+                </h2>
             </div>
-            <div class="footer_items">
-                <img style="width:30px; height:30px" src="location.png" />
-                <div class="big">
-                    <p> ADDRESS</p>
-                </div>
-
-                <p>Alexandra Rd,</p>
-                <p>Singapore 159958</p>
-
+            <div class="paras-new">
+                <h3>Partner with Sociosip, a leading Digital Marketing Agency, serving businesses worldwide</h3>
             </div>
-            <div class="footer_items">
-                <img style="width:30px; height:30px" src="phone.png" />
-                <div class="big">
-                    <p> PHONE</p>
-                </div>
+            <div class="paras2-new">
+                <p>We assist small businesses in gaining measurable growth, through digital marketing services. We are
+                    experts, who have the resources to convert your dream of building a digital business into reality,
+                    through the following:</p>
+            </div>
+            <img class="landding_img" src="low opacity main.png" />
+        </div>
 
-                <p> +65 83000562</p>
-                <p> +91 9769652708</p>
+        <div class="para">
+            <div class="heading">
+                <h2>Dedicated Social Team</h2>
+                <p class="content">We have a team of dedicated professionals, including Social Media Experts, Graphic
+                    Designers, Video Editors, and Content Writers, who can produce all sorts of tailored content for
+                    your business social media accounts that cater to the target audience. The SMM, we have, leverages
+                    the power of social media networks and through that takes your business from 0 to 10.</p>
+            </div>
+
+            <div class="imgage">
+                <img src="jason-goodman-fznQW-kn5VU-unsplash.jpg">
             </div>
         </div>
-        <div class="social_media">
-            <img style="width:30px; height:30px" src="instagram.png" />
-            <img style="width:30px; height:30px" src="linkedin.png" />
-            <img style="width:30px; height:30px" src="google plus.png" />
-            <img style="width:30px; height:30px" src="facebook.png" />
-            <img style="width:30px; height:30px" src="behance.png" />
-            <img style="width:30px; height:30px" src="x.png" />
-
-
+        <div class="para">
+            <div class="imgage">
+                <img src="georgia-de-lotz-Ebb8fe-NZtM-unsplash.jpg">
+            </div>
+            <div class="heading">
+                <h2>Results Driven Services</h2>
+                <p class="content">The strategies and services offered by us are completely results-driven. They are
+                    specifically developed for businesses to gain higher returns which can be further used to refine the
+                    process of success. Everything done by our digital marketing agency defines the success of the
+                    businesses we are helping.</p>
+            </div>
         </div>
+        <div class="para">
+            <div class="heading">
+                <h2>Take your business Global</h2>
+                <p class="content">There were days when the customer base was less and limited to the people near you.
+                    But with the assistance of digital marketing, you can take your business globally and reach your
+                    aim. By promoting a business on various social media channels, you can reach potential customers
+                    living in any part of the globe.</p>
+            </div>
+            <div class="imgage">
+                <img src="muhammad-faiz-zulkeflee-alw-CwGFmwQ-unsplash.jpg">
+            </div>
+        </div>
+        <div class="para">
+            <div class="imgage">
+                <img src="dennis-cortes-6Mnof7cxaS4-unsplash.jpg">
+            </div>
+            <div class="heading">
+                <h2>Budget Friendly</h2>
+                <p class="content">What do you think would be budget-friendly for your business? A TV ad or promoting
+                    business through Social Media Campaigns? Of course, Social Media Campaigns. This would be indeed the
+                    best option because the audience you would cater to through Social Media would also be perfect
+                    according to your product-market fit and also would not add too much financial burden on your
+                    business.</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <h2 style="text-align:center; color:white ;">GET IN TOUCH WITH US TODAY</h2>
+            <div class="footer_content">
+                <div class="footer_items">
+                    <img style="width:30px; height:30px" src="email.png" />
+                    <div class="big">
+                        <p>Email</p>
+                    </div>
+                    <p>abdulhuseinjaibi</p>
+                    <p>lamiya@sociosip.com</p>
+                </div>
+                <div class="footer_items">
+                    <img style="width:30px; height:30px" src="location.png" />
+                    <div class="big">
+                        <p> ADDRESS</p>
+                    </div>
+
+                    <p>Alexandra Rd,</p>
+                    <p>Singapore 159958</p>
+
+                </div>
+                <div class="footer_items">
+                    <img style="width:30px; height:30px" src="phone.png" />
+                    <div class="big">
+                        <p> PHONE</p>
+                    </div>
+
+                    <p> +65 83000562</p>
+                    <p> +91 9769652708</p>
+                </div>
+            </div>
+            <div class="social_media">
+                <img style="width:30px; height:30px" src="instagram.png" />
+                <img style="width:30px; height:30px" src="linkedin.png" />
+                <img style="width:30px; height:30px" src="google plus.png" />
+                <img style="width:30px; height:30px" src="facebook.png" />
+                <img style="width:30px; height:30px" src="behance.png" />
+                <img style="width:30px; height:30px" src="x.png" />
+
+
+            </div>
 
 </body>
 
